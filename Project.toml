@@ -1,13 +1,28 @@
 name = "ProjectionOntoSLn"
-uuid = "cc33f34f-f6f4-4b3f-8b77-bf661905a5b3"
-authors = ["Patrick Jaap <patrick.jaap@wias-berlin.de> and contributors"]
-version = "1.0.0-DEV"
+uuid = "4121a27e-c3cd-420c-928d-9730d80fd3cb"
+authors = ["Patrick Jaap <jaap@wias-berlin.de>"]
+version = "1.0.0"
+
+[deps]
+Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
+ForwardDiff = "f6369f11-7733-5829-9624-2563aa707210"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+StaticArrays = "90137ffa-7385-5640-81b9-e52037218182"
 
 [compat]
-julia = "1"
+Aqua = "0.8"
+Distributions = "0.25.113"
+ExplicitImports = "1.10.1"
+ForwardDiff = "1"
+LinearAlgebra = "1"
+StaticArrays = "1.9.7"
+Test = "1"
+julia = "1.10"
 
 [extras]
+Aqua = "4c88cf16-eb10-579e-8560-4a9242c79595"
+ExplicitImports = "7d51a73a-1435-4ff3-83d9-f097790105c7"
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 
 [targets]
-test = ["Test"]
+test = ["Aqua", "ExplicitImports", "Test"]

@@ -60,7 +60,7 @@ P = project_onto_sln(A)
 ## Advanced Usage
 
 Currently, there are four methods implemented to compute the projection:
-- Direct root finding: `root_finding`
+- Direct root finding: `root_finding` (this is the default if no method is specified, as seen above)
 - Iterative composite step: `composite_step`
 - Newton with scalar constraint: `constrained_newton`
 - An unconstrained Newton method: `unconstrained_newton`

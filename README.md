@@ -43,7 +43,7 @@ pkg> add https://github.com/pjaap/ProjectionOntoSLn.jl
 
 # Usage
 
-The main function exported of this package is `project_onto_sln`.
+The main function exported by this package is `project_onto_sln`.
 This function can be called with a square matrix.
 
 ```

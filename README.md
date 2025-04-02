@@ -93,6 +93,10 @@ p = result.projection
 Note, in the vector case, a solution object of type `ProjectionResult` is returned.
 This also contains the number of iterations.
 
+## Benchmark
+
+See [ProjectionOntoSLnBenchmark.jl](https://github.com/pjaap/ProjectionOntoSLnBenchmark.jl/) for the benchmarks performed for the [paper](https://arxiv.org/abs/2501.19310).
+
 # Contributing
 
 Feel free to open PRs in order to contribute to the project :)

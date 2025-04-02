@@ -54,7 +54,7 @@ function compositeStepLoop(a::AbstractVector, p0::AbstractVector, maxIter::Integ
         diff = norm(pk1 - pk)
 
         if diff ≤ tol * norm(pk1) || diff < 1.0e-15
-            return ProjectionResult(pk1, k, Dict(:distance_to_p0 => norm(p_init - pk1)))
+            return ProjectionResult(pk1, k)
         end
 
         pk = pk1
@@ -68,5 +68,5 @@ function compositeStepLoop(a::AbstractVector, p0::AbstractVector, maxIter::Integ
 
     error("maximal number of iterations exceeded")
 
-    return ProjectionResult(p0, maxIter, [])
+    return ProjectionResult(p0, maxIter)
 end

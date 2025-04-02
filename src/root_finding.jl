@@ -48,5 +48,5 @@ function rootFinding(a; tolerance, debug, maxIter, kwargs...)
     λ, iterations = regulaFalsi(f, x0, x1, maxIter; xTol = tolerance, debug)
 
     # step 3: construct p on the path
-    return ProjectionResult(P(λ), iterations, Dict(:distance_to_p0 => norm(a - P(λ))))
+    return ProjectionResult(P(λ), iterations)
 end

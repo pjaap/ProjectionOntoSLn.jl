@@ -65,7 +65,7 @@ function constrainedNewtonLoop(a, p_k, λ_k, maximal_iterations, tolerance, debu
         norm_iter = norm(p_k, Inf)
 
         if norm_diff ≤ tolerance * norm_iter || norm_diff ≤ 1.0e-15
-            return ProjectionResult(exp.(p_k), i, Dict(:distance_to_p0 => norm(exp.(p_init) - exp.(p_k))))
+            return ProjectionResult(exp.(p_k), i)
         end
 
 
@@ -75,5 +75,5 @@ function constrainedNewtonLoop(a, p_k, λ_k, maximal_iterations, tolerance, debu
 
     error("constrainedNewtonLoop did not converge")
 
-    return ProjectionResult(exp.(p_k), maximal_iterations, [])
+    return ProjectionResult(exp.(p_k), maximal_iterations)
 end

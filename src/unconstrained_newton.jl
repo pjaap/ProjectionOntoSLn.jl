@@ -83,7 +83,7 @@ function unconstrainedNewtonLoop(a; maxIter, tolerance, debug)
 
         # stop if grad = 0
         if norm(grad, Inf) ≤ 1.0e-15
-            return ProjectionResult(exp.(Bn * mu_k), i, Dict(:distance_to_p0 => norm(exp.(Bn * mu_k) - exp.(Bn * mu_init))))
+            return ProjectionResult(exp.(Bn * mu_k), i)
         end
 
         # we do not put the minus sign here: we subtract c_k at all occurrences
@@ -99,7 +99,7 @@ function unconstrainedNewtonLoop(a; maxIter, tolerance, debug)
         norm_iter = norm(mu_k, Inf)
 
         if norm_diff ≤ tolerance * norm_iter || norm_diff ≤ 1.0e-15
-            return ProjectionResult(exp.(Bn * mu_k), i, Dict(:distance_to_p0 => norm(exp.(Bn * mu_k) - exp.(Bn * mu_init))))
+            return ProjectionResult(exp.(Bn * mu_k), i)
         end
 
     end
@@ -109,5 +109,5 @@ function unconstrainedNewtonLoop(a; maxIter, tolerance, debug)
     error("conformingDescentLoop did not converge")
 
     # assemble P = exp( B * mu )
-    return ProjectionResult(exp.(Bn * mu_k), maxIter, [])
+    return ProjectionResult(exp.(Bn * mu_k), maxIter)
 end

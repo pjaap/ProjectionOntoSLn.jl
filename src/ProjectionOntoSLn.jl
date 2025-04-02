@@ -17,9 +17,6 @@ struct ProjectionResult
 
     # number of iterations of the projection method
     iterations::Unsigned
-
-    # additional information in a dictionary
-    misc::Dict{Symbol, Any}
 end
 
 
